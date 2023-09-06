@@ -1,0 +1,53 @@
+1)Standardization
+Standardization typically means rescales data to have a mean of 0 and a standard deviation of 1 (unit variance).
+μ=0 and σ=1,where μ is the mean and σ is the standard deviation from the mean;
+
+Normalization
+Normalization typically means rescales the values into a range of [0,1]
+Normalization is typically done via the following equation:
+
+rescaled_value (x bar) = original_value(xi) - minimum_value_in_feature(min(x))/maximum_value_in_feauture(max(x)-min(x)
+
+
+
+
+2)The difference between CPU, GPU and TPU is that the CPU handles all the logics, calculations, and input/output of the computer, it is a general-purpose processor. In comparison, GPU is an additional processor to enhance the graphical interface and run high-end tasks. TPUs are powerful custom-built processors to run the project made on a specific framework, i.e. TensorFlow.
+
+CPU:
+It is the primary hardware of the computer that executes the instruction for computer programs. All the basic arithmetic, logic, controlling, and the CPU handles input/output functions of the program.
+CPU runs the operating system, continually receiving inputs and providing output to the users.
+A CPU contains at least one processor. The processor is an actual chip inside the CPU to perform all the calculations. For a long time, CPUs had only one processor, but now dual-core CPUs (CPU with two processors) are common.
+
+GPU:
+GPU helps in displaying what is going on in the brain by rendering the graphical user interface visually.GPU stands for Graphical Processing Unit, and it is integrated into each CPU in some form. But some tasks and applications require extensive visualization that available inbuilt GPU can’t handle. Tasks such as computer-aided design, machine learning, video games, live streamings, video editing, and data scientist.
+
+TPU:
+Tensor Processing Unit (TPU) is an application-specific integrated circuit, to accelerate the AI calculations and algorithm. Google develops it specifically for neural network machine learning for the TensorFlow software.
+Google started using TPU in 2015; then, they made it public in 2018. You can have TPU as a cloud or smaller version of the chip.
+TPUs are custom build processing units to work for a specific app framework. That is TensorFlow. An open-source machine learning platform, with state of the art tools, libraries, and community, so the user can quickly build and deploy ML apps.
+Cloud TPU allows you to run your machine learning projects on TPU using TF. Designed for powerful performance, and flexibility, Google’s TPU helps researchers and developers to run models with high-level TensorFlow APIs.
+The models who used to take weeks to train on GPU or any other hardware can put out in hours with TPU. 
+
+
+
+3)Hyperparameters in neural network
+Hyperparameters are the variables which determines the network structure(Eg: Number of Hidden Units) and the variables which determine how the network is trained(Eg: Learning Rate).
+Hyperparameters are set before training(before optimizing the weights and bias).
+
+Hyperparameters related to network structure:
+
+--->Many hidden units within a layer with regularization techniques can increase accuracy. Smaller number of units may cause underfitting.
+--->Dropout is regularization technique to avoid overfitting (increase the validation accuracy) thus increasing the generalizing power.
+------>Generally, use a small dropout value of 20%-50% of neurons with 20% providing a good starting point. A probability too low has minimal effect and a value too high results in under-learning by the network.
+	   Use a larger network. You are likely to get better performance when dropout is used on a larger network, giving the model more of an opportunity to learn independent representations.
+--->Activation functions are used to introduce nonlinearity to models, which allows deep learning models to learn nonlinear prediction boundaries.Generally, the rectifier activation function is the most popular.Sigmoid is used in the output layer while making binary predictions. Softmax is used in the output layer while making multi-class predictions.
+
+Hyperparameters related to Training Algorithm:
+--->The learning rate defines how quickly a network updates its parameters.Low learning rate slows down the learning process but converges smoothly. Larger learning rate speeds up the learning but may not converge.Usually a decaying Learning rate is preferred
+--->Momentum helps to know the direction of the next step with the knowledge of the previous steps. It helps to prevent oscillations. A typical choice of momentum is between 0.5 to 0.9.
+--->Number of epochs is the number of times the whole training data is shown to the network while training.Increase the number of epochs until the validation accuracy starts decreasing even when training accuracy is increasing(overfitting).
+--->Mini batch size is the number of sub samples given to the network after which parameter update happens.A good default for batch size might be 32. Also try 32, 64, 128, 256, and so on.
+
+
+4)Effect of hyperparameter on model:
+Hyperparameters control other parameters of the model such as weights and biases. Parameter values are learned effectively by tuning the hyperparameters. Hence, hyperparameters determine the values of the parameters of the model. Manual Tuning is a tedious and time-consuming process. Automating the selection of values for hyperparameters results in the development of effective models. It has to be investigated to figure out which combinations yield the optimum results.
